@@ -1,16 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/RootRL"
+	android:id="@+id/RootHSV"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:layout_weight="1"
+	android:background="@android:color/holo_orange_light"
+	android:orientation="vertical"
+	android:overScrollMode="always"
 	tools:context=".MainActivity">
 
-	<TextView
+	<LinearLayout
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Hello World!"
-		android:layout_centerInParent="true"/>
+		android:layout_height="match_parent"
+		android:background="@android:color/holo_purple"
+		android:orientation="horizontal">
 
-</RelativeLayout>
+		<LinearLayout
+			android:id="@+id/Tip1_RootLL"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:background="@android:color/holo_red_dark"
+			android:padding="32dp">
+
+			<TextView
+				android:id="@+id/Tip1_TitleTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Title 1"
+				android:textColor="@android:color/black"
+				android:textSize="30sp" />
+
+			<ImageView
+				android:id="@+id/Tip1_IV"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:src="@mipmap/ic_launcher_background" />
+
+			<TextView
+				android:id="@+id/Tip1_TextTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Text 1"
+				android:textColor="@android:color/black" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/Tip2_RootLL"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:background="@android:color/holo_red_light"
+			android:padding="32dp">
+
+			<TextView
+				android:id="@+id/Tip2_TitleTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Title 2"
+				android:textColor="@android:color/black"
+				android:textSize="30sp" />
+
+			<ImageView
+				android:id="@+id/Tip2_IV"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:src="@mipmap/ic_launcher_background" />
+
+			<TextView
+				android:id="@+id/Tip2_TextTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Text 2"
+				android:textColor="@android:color/black" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/Tip3_RootLL"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:background="@android:color/holo_purple"
+			android:padding="32dp">
+
+			<TextView
+				android:id="@+id/Tip3_TitleTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Title 3"
+				android:textColor="@android:color/black"
+				android:textSize="30sp" />
+
+			<ImageView
+				android:id="@+id/Tip3_IV"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:src="@mipmap/ic_launcher_background" />
+
+			<TextView
+				android:id="@+id/Tip3_TextTV"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Text 3"
+				android:textColor="@android:color/black" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/TipContinue_RootLL"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:background="@android:color/holo_red_dark"
+			android:padding="32dp">
+			<Button
+				android:id="@+id/TipContinue_Btn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/colorPrimary"
+				android:textColor="@android:color/white"
+				android:padding="24dp"
+				android:onClick="ContinueBtnClick"
+				android:text="Continue" />
+		</LinearLayout>
+	</LinearLayout>
+</HorizontalScrollView>
+
+
+	<!--
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+			<RelativeLayout
+				android:id="@+id/Tip1RL"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:padding="32dp">
+
+				<TextView
+					android:id="@+id/Tip1_TitleTV"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="Title 1"
+					android:textColor="@android:color/black"
+					android:textSize="30sp" />
+
+				<ImageView
+					android:id="@+id/Tip1_IV"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_above="@id/Tip1_TextTV"
+					android:layout_below="@id/Tip1_TitleTV"
+					android:src="@mipmap/ic_launcher_background" />
+
+				<TextView
+					android:id="@+id/Tip1_TextTV"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:gravity="center"
+					android:text="Text 1"
+					android:textColor="@android:color/black" />
+			</RelativeLayout>
+			</ScrollView>
+		</LinearLayout>
+
+-->

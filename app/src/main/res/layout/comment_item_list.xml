@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginVertical="4dp"
+	android:background="@android:color/white"
+	android:orientation="horizontal"
+	android:padding="4dp">
+
+	<ImageView
+		android:layout_width="?attr/actionBarSize"
+		android:layout_height="?attr/actionBarSize"
+		android:layout_marginRight="8dp"
+		android:padding="5dp"
+		android:src="@drawable/icon_background" />
+
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:orientation="horizontal">
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="@android:color/white"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="bottom"
+					android:text="Username"
+					android:textColor="@android:color/black"
+					android:textSize="16sp" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="00/00/0000 (00:00 AM)"
+					android:textSize="10sp" />
+			</LinearLayout>
+
+			<ImageButton
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="match_parent"
+				android:backgroundTint="@android:color/white"
+				android:src="@drawable/ic_more" />
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingRight="4dp"
+			android:text="@string/ccomment_text" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:paddingTop="16dp">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:src="@drawable/ic_favorite_empty" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:gravity="center_vertical"
+				android:paddingHorizontal="4dp"
+				android:text="00"
+				android:textColor="@android:color/black"
+				android:textSize="12sp" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

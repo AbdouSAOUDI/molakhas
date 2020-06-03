@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#EEE"
+	tools:context=".TestsAcivity">
+
+	<LinearLayout
+		android:id="@+id/RootLL"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/HeaderRootRL"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="@android:color/darker_gray"
+			android:paddingBottom="1dp">
+
+			<ImageView
+				android:id="@+id/PubProfilePicture"
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentBottom="true"
+				android:background="@android:color/white"
+				android:padding="5dp"
+				android:paddingRight="12dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentBottom="true"
+				android:layout_toStartOf="@id/MoreIV"
+				android:layout_toEndOf="@id/PubProfilePicture"
+				android:background="@android:color/white"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/PubUsername"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="bottom"
+					android:text="Username"
+					android:textColor="@android:color/black"
+					android:textSize="16sp" />
+
+				<TextView
+					android:id="@+id/PubPostDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="00/00/0000 (00:00 AM)"
+					android:textSize="10sp" />
+			</LinearLayout>
+
+			<ImageButton
+				android:id="@+id/MoreIV"
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_alignParentEnd="true"
+				android:background="@android:color/white"
+				android:backgroundTint="@android:color/white"
+				android:src="@drawable/ic_more" />
+		</RelativeLayout>
+
+		<ImageButton
+			android:id="@+id/PubImage"
+			android:layout_width="match_parent"
+			android:layout_height="180px"
+			android:background="@android:color/white"
+			android:backgroundTint="@android:color/white"
+			android:scaleType="centerInside"
+			android:src="@drawable/picture_1" />
+
+		<TextView
+			android:id="@+id/PubTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/white"
+			android:gravity="center"
+			android:text="title"
+			android:textColor="@android:color/black"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/PubText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/white"
+			android:padding="8dp"
+			android:text="@string/pub_text"
+			android:textSize="14sp" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="@android:color/darker_gray"
+			android:orientation="horizontal"
+			android:paddingBottom="1dp">
+
+			<ImageView
+				style="@style/PubItemButton"
+				android:src="@drawable/ic_favorite" />
+
+			<ImageView
+				style="@style/PubItemButton"
+				android:src="@drawable/ic_comment" />
+
+			<ImageView
+				style="@style/PubItemButton"
+				android:src="@drawable/ic_download" />
+
+			<ImageView
+				style="@style/PubItemButton"
+				android:src="@drawable/ic_share" />
+
+			<ImageView
+				style="@style/PubItemButton"
+				android:src="@drawable/ic_warning" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="8dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="8dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="4dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="8dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="8dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="4dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="8dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="8dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="4dp"
+			android:background="@android:color/white"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<ImageView
+				android:layout_width="?attr/actionBarSize"
+				android:layout_height="?attr/actionBarSize"
+				android:layout_marginRight="4dp"
+				android:padding="5dp"
+				android:src="@drawable/icon_background" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@android:color/white"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="bottom"
+							android:text="Username"
+							android:textColor="@android:color/black"
+							android:textSize="16sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="00/00/0000 (00:00 AM)"
+							android:textSize="10sp" />
+					</LinearLayout>
+
+					<ImageButton
+						android:layout_width="?attr/actionBarSize"
+						android:layout_height="match_parent"
+						android:backgroundTint="@android:color/white"
+						android:src="@drawable/ic_more" />
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="4dp"
+					android:text="@string/ccomment_text" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:paddingTop="16dp">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:src="@drawable/ic_favorite_empty" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:paddingHorizontal="4dp"
+						android:text="00"
+						android:textColor="@android:color/black"
+						android:textSize="12sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

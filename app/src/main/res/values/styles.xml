@@ -8,4 +8,11 @@
 		<item name="colorAccent">@color/colorAccent</item>
 	</style>
 
+	<style name="PubItemButton">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:padding">12dp</item>
+		<item name="android:background">@color/PubItemButtonColor</item>
+	</style>
 </resources>

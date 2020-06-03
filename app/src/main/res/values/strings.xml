@@ -1,3 +1,5 @@
 <resources>
 	<string name="app_name">molakhas ملخص</string>
+	<string name="pub_text">this is the main text…</string>
+	<string name="ccomment_text">this is a comment…</string>
 </resources>
